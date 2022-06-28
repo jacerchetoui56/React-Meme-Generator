@@ -9,7 +9,6 @@ export default function Form() {
         lastSentense: '',
         url: "http://i.imgflip.com/1bij.jpg"
     })
-    console.log(formData)
     function handleFormChange(event) {
         // !the best practice is this one
         const { name, value } = event.target
@@ -21,7 +20,6 @@ export default function Form() {
         })
     }
 
-    console.log(allMemes)
     function handleSubmit(event) {
         event.preventDefault()
     }
