@@ -1,10 +1,7 @@
 import React from "react"
 import Header from './Header'
 import Form from './Form'
-// import Ages from './Ages'
-// import New from './New'
 import './styles.css'
-// import Sign from "./Sign"
 
 
 
@@ -14,9 +11,6 @@ export default function App() {
     <>
       <Header />
       <Form />
-      {/* <Ages /> */}
-      {/* <New /> */}
-      {/* <Sign /> */}
     </>
   )
 }
