@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(to right, #672280, #a626d3);
+  color: white;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .logo span {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+header .logo img {
+  width: 40px;
+}
+
+/* !====== form component ========= */
+
+.form {
+  width: min(80%, 550px);
+  margin: 2rem auto;
+}
+
+.form .inputs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.form .inputs input {
+  flex: 1;
+  font-size: 0.9rem;
+  padding: 0.65rem;
+  border-radius: 0.5rem;
+  border: solid 1px #d5d4d8;
+}
+input:focus {
+  outline: solid 2px #d5d4d8;
+}
+.form > input,
+.form button {
+  border: none;
+  background-image: linear-gradient(to right, #672280, #a626d3);
+  color: #fff;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* !================ meme ================ */
+
+.meme {
+  width: min(80%, 550px);
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.meme img {
+  width: 80%;
+}
+
+.meme .top-text,
+.meme .bottom-text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+.top-text {
+  top: 10%;
+}
+.bottom-text {
+  bottom: 10%;
+}
