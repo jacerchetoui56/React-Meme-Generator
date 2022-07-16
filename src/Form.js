@@ -15,14 +15,12 @@ export default function Form() {
         setFormData(prev => {
             return {
                 ...prev,
-                [name]: value
+                [name]: value //? be aware of the syntax here
+                //it is like you did this : ['firstSentense'] : 'hello'
             }
         })
     }
 
-    function handleSubmit(event) {
-        event.preventDefault()
-    }
     function getMeme() {
         let random = Math.floor(Math.random() * allMemes.length)
         setFormData(prev => {
@@ -41,19 +39,19 @@ export default function Form() {
 
     return (
         <div className='main'>
-            <form className='form' onSubmit={handleSubmit}>
+            <form className='form' onSubmit={(e) => e.preventDefault()}>
                 <div className='inputs'>
                     <input
                         onChange={handleFormChange}
                         name='firstSentense'
-                        type={'text'}
+                        type='text'
                         placeholder='first sentence'
                         value={formData.firstSentense} />
 
                     <input
                         onChange={handleFormChange}
                         name='lastSentense'
-                        type={'text'}
+                        type='text'
                         placeholder='second sentence'
                         value={formData.lastSentense}
                     />
@@ -62,7 +60,7 @@ export default function Form() {
                     Get a new meme image 🖼
                 </button>
             </form>
-            <Meme infos={formData} />
+            <Meme {...formData} />
         </div>
     )
 }
